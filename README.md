@@ -2,7 +2,7 @@
 
 accepted repo invitation
 
-##Chapter 6
+Chapter 6
 
 Below is an example command to run the script at local node for testing and learning.
 Replace FILEPATH with that of your own environment where this script is saved.
