@@ -24,7 +24,7 @@ Download Resnet feature vector from TensorFlow hub and place it in your own Gooo
 Note: in the example command below, the command is in a directory where setup.py is stored. in this directory, there is a 'python' directory, which has 'ScriptProject' directory, which contains hp_kt_resnet_tpu_act.py.
 
 gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_config \
---staging-bucket=gs://ai-tpu-experiment \
+--staging-bucket=gs://[YOUR_BUCKET_NAME] \
 --package-path=python \
 --module-name=python.ScriptProject.hp_kt_resnet_tpu_act \
 --runtime-version=2.1 \
@@ -34,6 +34,6 @@ gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_config \
 --use-chief-in-tf-config="true" \
 -- \
 --distribution_strategy=tpu \
---data_dir=gs://ai-tpu-experiment/tfrecord-flowers \
---model_dir=gs://ai-tpu-experiment/hp_kt_resnet_tpu_hb_config \
+--data_dir=gs://[BUCKET_NAME]/tfrecord-flowers \
+--model_dir=gs://[BUCKET_NAME]/hp_kt_resnet_tpu_hb_config \
 --tuner_type=HYPERBAND
