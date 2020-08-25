@@ -21,6 +21,8 @@ Below is an example command to run the script at your local node, and submit tra
 
 Download Resnet feature vector from TensorFlow hub and place it in your own Gooogle Cloud storage bucket instead of local directory.
 
+Note: in the example command below, the command is in a directory where setup.py is stored. in this directory, there is a 'python' directory, which has 'ScriptProject' directory, which contains hp_kt_resnet_tpu_act.py.
+
 gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_config \
 --staging-bucket=gs://ai-tpu-experiment \
 --package-path=python \
