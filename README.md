@@ -16,3 +16,22 @@ python3 FILEPATH/chapter_06_hp_kt_resnet_local_pub.py \
 --cached_basemodel_dir=FILEPATH/imagenet_resnet_v2_50_feature_vector_4 \
 --train_epoch_best=3 \
 --tuner_type=hypoerband
+
+Below is an example command to run the script at your local node, and submit training job to Google Cloud AI Platform using TPU.
+
+Download Resnet feature vector from TensorFlow hub and place it in your own Gooogle Cloud storage bucket instead of local directory.
+
+gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_config \
+--staging-bucket=gs://ai-tpu-experiment \
+--package-path=python \
+--module-name=python.ScriptProject.hp_kt_resnet_tpu_act \
+--runtime-version=2.1 \
+--python-version=3.7 \
+--scale-tier=BASIC_TPU \
+--region=us-central1 \
+--use-chief-in-tf-config="true" \
+-- \
+--distribution_strategy=tpu \
+--data_dir=gs://ai-tpu-experiment/tfrecord-flowers \
+--model_dir=gs://ai-tpu-experiment/hp_kt_resnet_tpu_hb_config \
+--tuner_type=HYPERBAND
