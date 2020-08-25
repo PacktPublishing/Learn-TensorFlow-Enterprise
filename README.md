@@ -11,6 +11,7 @@ Download ResNet feature vector from TensorFlow hub and extract it in cached_base
 https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/4
 
 Run this in your local environment's command terminal, it is executed by local compute:
+
 python3 FILEPATH/chapter_06_hp_kt_resnet_local_pub.py \
 --model_dir=FILEPATH/resnet_local_hb_1  \
 --cached_basemodel_dir=FILEPATH/imagenet_resnet_v2_50_feature_vector_4 \
@@ -24,6 +25,7 @@ Download Resnet feature vector from TensorFlow hub and place it in your own Gooo
 Note: in the example command below, the command is in a directory where setup.py is stored. in this directory, there is a 'python' directory, which has 'ScriptProject' directory, which contains hp_kt_resnet_tpu_act.py.
 
 Run this in your local environment's command terminal, it will be executed in GCP AI-Platform:
+
 gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_config \
 --staging-bucket=gs://[YOUR_BUCKET_NAME] \
 --package-path=python \
