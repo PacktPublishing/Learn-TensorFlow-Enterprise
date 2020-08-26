@@ -1,1 +1,5 @@
 Instruction and explanation
+
+TFRecord for flower dataset may be downloaded from 
+
+Tung, K, 2020, "flower_photos.zip", Flowers Dataset, https://doi.org/10.7910/DVN/1ECTVN/SG0HYG, Harvard Dataverse, V2
