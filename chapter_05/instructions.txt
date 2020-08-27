@@ -45,5 +45,22 @@ gcloud ai-platform jobs submit training gcloud_train_tfhub \
 --data_dir=gs://my-ai-tpu-experiment/tfrecord-flowers \
 --cache_dir=gs://my-ai-tpu-experiment/model-cache-dir/imagenet_resnet_v2_50_feature_vector_4
 
+For Appendix C in manuscript:
+gcloud ai-platform jobs submit training traincloudgpu_tfhub_resnet_gpu \
+--staging-bucket=gs://my-ai-tpu-experiment \
+--package-path=chapter_05 \
+--module-name=chapter_05.trainer_hub_gpu \
+--runtime-version=2.1 \
+--python-version=3.7 \
+--scale-tier=BASIC_GPU \
+--region=us-central1 \
+-- \
+--distribution_strategy=gpu \
+--model_dir=gs://my-ai-tpu-experiment/traincloudgpu_tfhub_resnet_gpu \
+--train_epochs=10 \
+--data_dir=gs://my-ai-tpu-experiment/tfrecord-flowers \
+--num_gpus=4
+
 6. Expect job completed successfully, check the result model and artifacts in model_dir.
+
 
