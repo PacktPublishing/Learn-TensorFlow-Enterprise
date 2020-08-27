@@ -4,7 +4,7 @@ TFRecord for flower dataset may be downloaded from
 
 Tung, K, 2020, "flower_photos.zip", Flowers Dataset, https://doi.org/10.7910/DVN/1ECTVN/SG0HYG, Harvard Dataverse, V2
 
-Make sure gcloud SDK is installed (see manuscript for instructions)
+Make sure gcloud SDK is installed in your local computer (see manuscript for instructions)
 
 1. Download above TFRecord datasets, unzip it.
 2. Download Resnet feature vector (our base model) from https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/4, unzip it.
