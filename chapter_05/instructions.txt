@@ -3,3 +3,29 @@ Instruction and explanation
 TFRecord for flower dataset may be downloaded from 
 
 Tung, K, 2020, "flower_photos.zip", Flowers Dataset, https://doi.org/10.7910/DVN/1ECTVN/SG0HYG, Harvard Dataverse, V2
+
+Make sure gcloud SDK is installed (see manuscript for instructions)
+
+1. Download above TFRecord datasets, unzip it.
+2. Download Resnet feature vector (our base model) from https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/4, unzip it.
+3. Upload each unzipped item to a gs bucket and folder, where cloud ai-platform has read and write permission (see manuscript for instruction about setting permissions)
+4. Clone this repo
+5. Run the command below from your cloned directory ~/.../learn-tensorflow-enterprise
+
+gcloud ai-platform jobs submit training gcloud_train \
+--staging-bucket=gs://my-ai-tpu-experiment \
+--package-path=chapter_05 \
+--module-name=chapter_05.gcloud_trainer \
+--runtime-version=2.1 \
+--python-version=3.7 \
+--scale-tier=BASIC_TPU \
+--region=us-central1 \
+-- \
+--distribution_strategy=tpu \
+--model_dir=gs://my-ai-tpu-experiment/gcloud_train \
+--train_epochs=3 \
+--data_dir=gs://my-ai-tpu-experiment/tfrecord-flowers \
+--cache_dir=gs://my-ai-tpu-experiment/model-cache-dir/imagenet_resnet_v2_50_feature_vector_4
+
+6. Expect job completed successfully, check the result model and artifacts in model_dir.
+
