@@ -15,7 +15,7 @@ Make sure gcloud SDK is installed in your local computer (see manuscript for ins
 gcloud ai-platform jobs submit training gcloud_train \
 --staging-bucket=gs://my-ai-tpu-experiment \
 --package-path=chapter_05 \
---module-name=chapter_05.gcloud_trainer \
+--module-name=chapter_05.trainer_hub \
 --runtime-version=2.1 \
 --python-version=3.7 \
 --scale-tier=BASIC_TPU \
