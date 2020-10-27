@@ -30,7 +30,8 @@ Since this uses cloud TPU, the following parameters in the input have to be rena
 
 `staging-bucket`: <YOUR_GCLOUD_STORAGE> This is your cloud storage bucket where you stage the training and dependency packages.
 
-`data_dir`: <YOUR_GCLOUD_STORAGE_FOR_TFRECORD> This is your cloud storage bucket where `TFRecord` files are stored.
+`data_dir`: <YOUR_GCLOUD_STORAGE_FOR_TFRECORD> This is your cloud storage bucket where `TFRecord` files are stored. For this example, use the TFRecord from here:
+            https://doi.org/10.7910/DVN/1ECTVN
 
 `model_dir`: <YOUR_GCLOUD_STORAGE_FOLDER> This represents the directory that saves the trained model once the hyperparameter search and training is done.
 
