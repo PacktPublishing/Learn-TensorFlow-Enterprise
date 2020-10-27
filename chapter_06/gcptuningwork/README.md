@@ -26,7 +26,7 @@ gcloud ai-platform jobs submit training hp_kt_resnet_tpu_hb_test \
 ```
 This code will execute `hp_kt_resnet_tpu_act.py`, which is in `/tfk/tuner` directory.
 
-Since this uses cloud TPU, the following parameters in the input have to be renamed to your own GCP cloud resources. 
+Since this uses cloud TPU, the following parameters in the input have to be renamed to your own GCP cloud resources in your own GCP account. 
 
 `staging-bucket`: <YOUR_GCLOUD_STORAGE> This is your cloud storage bucket where you stage the training and dependency packages.
 
