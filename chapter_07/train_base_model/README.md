@@ -2,7 +2,7 @@
 
 We are going to train a flower classifier model. This model is built with TensorFlow Hub's ResNet feature vector. The model will be trained to classify five different types of flowers. 
 
-To launch the training process, make sure you are in this directory. 
+To launch the training command, make sure you are in this directory. 
 
 ```console
 python3 default_trainer.py \
