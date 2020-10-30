@@ -176,8 +176,9 @@ def main(_):
     
     logging.info('INSIDE MAIN FUNCTION user input model_dir %s', flags_obj.model_dir)
     
-    timestr = time.strftime("%Y%m%d-%H%M%S")
-    output_folder = flags_obj.model_dir + '-' + timestr
+    # tagstr = time.strftime("%Y%m%d-%H%M%S") # use date time string
+    tagstr = 'unquantized'
+    output_folder = flags_obj.model_dir + '-' + tagstr
 
     if not os.path.exists(output_folder):
         os.mkdir(output_folder)
