@@ -2,7 +2,7 @@
 
 In this module, a Jupyter notebook is provided to cover the folloowing topics:
 
-1. Comparing model size.
+1. Compare model size between full model and quantized model.
 2. Convert a full model into Reduced Float16 TFLite model.
 3. Compare accuracy in scoring test data by TFLite and original model.
 
