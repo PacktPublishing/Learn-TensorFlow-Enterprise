@@ -20,7 +20,7 @@ tf.compat.v1.flags.DEFINE_string('distribution_strategy', 'tpu', 'Distribution s
 tf.compat.v1.flags.DEFINE_integer('train_epochs', 3, 'Number of epochs for training')
 tf.compat.v1.flags.DEFINE_string('data_dir', 'tf_datasets/flower_photos', 'training data path')
 tf.compat.v1.flags.DEFINE_integer('num_gpus', 4, 'Numer of GPU per worker')
-tf.compat.v1.flags.DEFINE_string('cache_dir', '~/Downloads/imagenet_resnet_v2_50_feature_vector_4' , 'Location of cached model')
+tf.compat.v1.flags.DEFINE_string('cache_dir', '../imagenet_resnet_v2_50_feature_vector_4' , 'Location of cached model')
 
 def model_default():
     flags_obj = flags.FLAGS
