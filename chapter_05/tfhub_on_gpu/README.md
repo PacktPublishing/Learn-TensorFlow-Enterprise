@@ -43,13 +43,13 @@ gcloud ai-platform jobs submit training traincloudgpu_tfhub_resnet_gpu \
 --cache_dir=gs://ai-tpu-experiment/model-cache-dir/imagenet_resnet_v2_50_feature_vector_4
 ```
 
-Job name is `traincloudgpu_tfhub_resnet_gpu`
-Staging bucket is `gs://ai-tpu-experiment`
-Bucket to save the model is `gs://ai-tpu-experiment/traincloudgpu_tfhub_resnet_gpu` 
-Training data is in `gs://tfrecord-dataset/flowers`
-Path to find ResNet feature vector model: `gs://ai-tpu-experiment/model-cache-dir/imagenet_resnet_v2_50_feature_vector_4`
+Job name is `traincloudgpu_tfhub_resnet_gpu`  
+Staging bucket is `gs://ai-tpu-experiment`  
+Bucket to save the model is `gs://ai-tpu-experiment/traincloudgpu_tfhub_resnet_gpu`   
+Training data is in `gs://tfrecord-dataset/flowers`  
+Path to find ResNet feature vector model: `gs://ai-tpu-experiment/model-cache-dir/imagenet_resnet_v2_50_feature_vector_4`  
 
-Notice `traincloudgpu_tfhub_resnet_gp` is the job name you assign to this execution. Each time you run this command, you need a new job name. GCP AI-Platform doesn't let you reuse job names.
+Notice `traincloudgpu_tfhub_resnet_gpu` is the job name you assign to this execution. Each time you run this command, you need a new job name. GCP AI-Platform doesn't let you reuse job names.
 
 
 
