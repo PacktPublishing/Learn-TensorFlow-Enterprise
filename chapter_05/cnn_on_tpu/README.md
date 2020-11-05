@@ -21,7 +21,7 @@ a job name,
 `--model_dir`
 `--data_dir`
 
-In my case of example below:
+In my case of example below, this is the command this shell script executes:
 
 ```console
 gcloud ai-platform jobs submit training gcloud_train_run6 \
@@ -45,9 +45,6 @@ Bucket to save the model is `gs://ai-tpu-experiment/gcloud_train_run6`
 Training data is in `gs://tfrecord-dataset/flowers`
 
 Notice `gcloud_train_run6` is the job name you assign to this execution. Each time you run this command, you need a new job name. GCP AI-Platform doesn't let you reuse job names.
-
-This is the command this script executes:
-
 
 
 Also, after `-- \`, what you see are script specific flags. If you write your own training script like I did in this case, these flag names are up to you. This is how you would specify user flags and pass these flags into your script.
