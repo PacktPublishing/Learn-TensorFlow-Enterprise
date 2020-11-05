@@ -27,10 +27,18 @@ def model_default():
     flags_obj = flags.FLAGS
 
     IMAGE_SIZE = (224, 224)
-    base_model = tf.keras.applications.ResNet50(input_shape=(224,224,3), include_top=False, weights='imagenet')
+    #base_model = tf.keras.applications.ResNet50(input_shape=(224,224,3), include_top=False, weights='imagenet')
     model = tf.keras.Sequential([
-        base_model,
-        tf.keras.layers.GlobalAveragePooling2D(),
+        #base_model,
+        tf.keras.layers.Conv2D(32, kernel_size=(3, 3), activation='relu', 
+            kernel_initializer='he_uniform', padding='same', input_shape =IMAGE_SIZE + (3,)),
+        tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
+        tf.keras.layers.Dropout(0.2),
+        #tf.keras.layers.GlobalAveragePooling2D(),
+        tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+        tf.keras.layers.MaxPooling2D((2, 2)),
+        tf.keras.layers.Dropout(0.2),
+        tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(5, activation='softmax', name = 'custom_class')
     ])
 
