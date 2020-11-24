@@ -1,0 +1,48 @@
+{
+  "name": "image_classification_builder",
+  "schema": {
+    "feature": [
+      {
+        "name": "image"
+      }
+    ]
+  },
+  "splits": [
+    {
+      "name": "test",
+      "numBytes": "2418257",
+      "shardLengths": [
+        "50"
+      ],
+      "statistics": {
+        "numExamples": "50"
+      }
+    },
+    {
+      "name": "train",
+      "numBytes": "181127430",
+      "shardLengths": [
+        "1770",
+        "1770"
+      ],
+      "statistics": {
+        "numExamples": "3540"
+      }
+    },
+    {
+      "name": "validation",
+      "numBytes": "3416672",
+      "shardLengths": [
+        "80"
+      ],
+      "statistics": {
+        "numExamples": "80"
+      }
+    }
+  ],
+  "supervisedKeys": {
+    "input": "image",
+    "output": "image/class/label"
+  },
+  "version": "0.1.0"
+}
