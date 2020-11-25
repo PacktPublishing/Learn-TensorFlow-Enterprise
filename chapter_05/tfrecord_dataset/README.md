@@ -10,8 +10,11 @@ You should upload [`flower`](https://github.com/PacktPublishing/learn-tensorflow
 Once you are done, below is an image of how it should look like:
 ![](s1.png)
 
-## Upload pre-built ResNet feature vector model to your cloud storage
+## Upload pre-built model to your cloud storage
 
 It is a good idea to cache the pre-built model from TensorFlow Hub beforehand, so it is always accessible in case connectivity issues occur.
 
 You should to upload [`model-cache-dir`](https://github.com/PacktPublishing/learn-tensorflow-enterprise/tree/master/chapter_05/tfrecord_dataset/model-cache-dir) into your cloud storage buchet. You may go to GCP portal to create a bucket and upload the directory.
+
+Once you are done, below is an image of how it should look like:
+![](s2.png)
