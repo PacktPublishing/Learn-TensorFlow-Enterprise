@@ -50,3 +50,27 @@ Notice `gcloud_train_run6` is the job name you assign to this execution. Each ti
 Also, after `-- \`, what you see are script specific flags. If you write your own training script like I did in this case, these flag names are up to you. This is how you would specify user flags and pass these flags into your script.
 
 Before `-- \` are all Google Cloud ai-platform flags. Therefore these flags names should not be changed.
+
+## Expected outcome
+
+You may submit the training job with `gcloud` command directly into your command line environment. Make sure you are in this directory. You will see output as below:
+
+![](submit1.png)
+
+Notice it also gives us a command to retrieve running log:
+
+`gcloud ai-platform jobs stream-logs gcloud_train_run1124a`
+
+If you run the command, you will see:
+
+![](submit2.png)
+
+The `View logs at:`gives you an URL. Once you navigate it via abrowser, you will see the running log:
+
+![](submit3.png)
+
+It may take up to ten minutes for the training program to start. Google Cloud is looking for and prepare the resources. Your experience may vary depending on your region and resource availability.
+
+Once the training ends, you will see output similar to this:
+
+![](submit5.png)
