@@ -74,3 +74,7 @@ It may take up to ten minutes for the training program to start. Google Cloud is
 Once the training ends, you will see output similar to this:
 
 ![](submit5.png)
+
+You may notice that with this simple model, validation accuracy is only around 20%. Later, when you use ResNet feature vector instead, your validation accuracy will reach above 80%. 
+
+This means that with these flower images, it is actually very hard to custom build a model that works well. And when you leverage transfer learning with pre-trained ResNet feature vector, you will have much better validation accuracy.
