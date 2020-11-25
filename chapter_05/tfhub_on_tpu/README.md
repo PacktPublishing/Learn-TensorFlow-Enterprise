@@ -3,8 +3,8 @@
 
 To see how this example work, you need to complete the following first:
 
-1. Download `TFRecord` data from `https://dataverse.harvard.edu/api/access/datafile/4159750`
-2. Unzip the downloaded data and put it in your own cloud storage followed by a folder, such as: `gs://<MY_BUCKET_NAME>/<DATA_DIR_NAME>`
+1. Go to [`tfrecord-dataset`](https://github.com/PacktPublishing/learn-tensorflow-enterprise/tree/master/chapter_05/tfrecord_dataset) and upload the content according to demonstration there. The folder contains the data for you to upload to your own Google cloud storage. 
+2. Make a note of the file path, such as: `gs://<MY_BUCKET_NAME>/<DATA_DIR_NAME>`
     In this path, you should have two training TFRecord parts, one validation part, one test part, and one small test part. This is your `data_dir` in the command below.
 3. Create a target bucket for staging purpose during training and saving the trained model one training is done. Make a note of the storage bucket name as `gs://<TRAIN_BUCKET_NAME>/<SAVING_FOLDER_NAME>` (this is `model_dir` and `staging-bucket` in the training command example below).
 4. Download ResNet feature vector from TensorFlow Hub in https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/4, unzip it, and then upload it to your own storage bucket. Make a note of the path to the saved_model.pb. It should be something like: gs://<MY_BUCKET_AND_FOLDER>/imagenet_resnet_v2_50_feature_vector_4
