@@ -1,8 +1,8 @@
-# Learn Tensorflow Enterprise
+# Learn TensorFlow Enterprise
 
 <a href="https://www.packtpub.com/product/learn-tensorflow-enterprise/9781800209145?utm_source=github&utm_medium=repository&utm_campaign=9781800209145"><img src="https://static.packt-cdn.com/products/9781800209145/cover/smaller" alt="Learn Amazon SageMaker" height="256px" align="right"></a>
 
-This is the code repository for [Learn Tensorflow Enterprise](https://www.packtpub.com/product/learn-tensorflow-enterprise/9781800209145?utm_source=github&utm_medium=repository&utm_campaign=9781800209145), published by Packt.
+This is the code repository for [Learn TensorFlow Enterprise](https://www.packtpub.com/product/learn-tensorflow-enterprise/9781800209145?utm_source=github&utm_medium=repository&utm_campaign=9781800209145), published by Packt.
 
 **Build, manage, and scale machine learning workloads seamlessly using Google's TensorFlow Enterprise**
 
